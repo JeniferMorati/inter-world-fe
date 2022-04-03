@@ -3,6 +3,7 @@ import Budgets from "./Budgets";
 import Languages from "./Languages";
 import Travel from "./Travel";
 import Home from "./Home";
+import Login from './Login';
 
 export {
   Travel,
@@ -10,4 +11,5 @@ export {
   Budgets,
   Home,
   Languages,
+  Login,
 };
