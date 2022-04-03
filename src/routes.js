@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
-import { Home, Budgets, Login} from "./Pages";
+import { Home, Budgets, Login, About } from "./Pages";
 
 const AppRouter = () => {
   return (
@@ -10,6 +10,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="/orcamentos" element={<Budgets />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/sobre" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
