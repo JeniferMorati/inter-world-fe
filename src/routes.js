@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
-import { Home, Budgets, Login, About } from "./Pages";
+import { Home, Budgets, Login, About, Travel } from "./Pages";
 
 const AppRouter = () => {
   return (
@@ -11,6 +11,7 @@ const AppRouter = () => {
         <Route path="/orcamentos" element={<Budgets />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="/destinos" element={<Travel />} />
       </Routes>
     </BrowserRouter>
   );
