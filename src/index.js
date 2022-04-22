@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import AppRouter from './routes';
 
 import reportWebVitals from './reportWebVitals';
