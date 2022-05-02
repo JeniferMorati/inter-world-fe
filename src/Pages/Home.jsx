@@ -1,10 +1,8 @@
-import React from 'react';
-import { MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
+import { MDBBtn } from "mdbreact";
+import React from "react";
 
 function Home() {
-  return (
-    <div>Página inicial</div>
-  );
+  return <div>Página inicial</div>;
 }
 
 export default Home;
