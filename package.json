@@ -1,16 +1,27 @@
 {
-  "name": "mdb-react-template",
-  "version": "3.0.0",
-  "description": "template for mdb-react-ui-kit",
+  "name": "inter-world-fe",
+  "version": "1.0.0",
+  "description": "front-end page for inter world project",
   "private": true,
+  "contributors": [
+    "Jenifer Morati <jenifer.morati26@gmail.com>",
+    "Mariana Lourenço <...>"
+  ],
   "dependencies": {
-    "mdbreact": "^5.2.0",
+    "mdb-react-ui-kit": "^3.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,7 +33,6 @@
     "template",
     "react"
   ],
-  "author": "MDBootstrap",
   "license": "MIT",
   "browserslist": {
     "production": [
