@@ -15,6 +15,8 @@ const Login = () => {
     navigate("/");
   }, []);
 
+  console.log('Olá mundo!');
+
   return <div>Página Login</div>;
 };
 
