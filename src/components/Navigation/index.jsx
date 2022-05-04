@@ -36,11 +36,12 @@ const getItemContentType = (item) => {
 };
 
 const getAllItemsComponents = (item) => {
+  const codeKey = `render-${Math.random(new Date()).toFixed(5).toString().replace("0.", "")}`
   const children =
     item.items && !item.hidden ? item.items.map(getAllItemsComponents) : [];
   const { componentTag, attributes } = getItemContentType(item);
   const Component = componentTag;
-  return <Component {...attributes}>{children}</Component>;
+  return <Component key={codeKey} {...attributes}>{children}</Component>;
 };
 
 // ::
