@@ -1,18 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
-import AppRouter from './routes';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+
+// App
+import AppRouter from "./routes";
+import Navigation from "./components/Navigation";
+import { AppProvider } from "./context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRouter />
+    <AppProvider>
+      <BrowserRouter>
+        <Navigation />
+        <AppRouter />
+      </BrowserRouter>
+    </AppProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
