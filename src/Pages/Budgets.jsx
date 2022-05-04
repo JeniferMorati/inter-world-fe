@@ -1,5 +1,5 @@
-const Home = () => {
+const Budgets = () => {
   return <div>Página Orçamentos</div>;
 };
 
-export default Home;
+export default Budgets;

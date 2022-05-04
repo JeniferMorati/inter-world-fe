@@ -4,6 +4,8 @@ import Languages from "./Languages";
 import Travel from "./Travel";
 import Home from "./Home";
 import Login from './Login';
+import Logout from './Logout';
+import SignUp from './SignUp';
 
 export {
   Travel,
@@ -12,4 +14,6 @@ export {
   Home,
   Languages,
   Login,
+  Logout,
+  SignUp,
 };
