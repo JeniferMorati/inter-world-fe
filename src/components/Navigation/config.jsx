@@ -41,7 +41,7 @@ export const navigationItems = (isAuthenticated) => ({
           ],
         },
         {
-          color: "warning",
+          color: "secondary",
           outline: true,
           contentType: "button",
           className: "text-dark",
@@ -52,7 +52,7 @@ export const navigationItems = (isAuthenticated) => ({
         {
           contentType: "button",
           className: "text-dark",
-          color: "warning",
+          color: "secondary",
           name: "Login",
           route: "/login",
           hidden: isAuthenticated,
