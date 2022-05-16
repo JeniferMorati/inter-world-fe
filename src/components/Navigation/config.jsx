@@ -57,6 +57,9 @@ export const navigationItems = (isAuthenticated) => ({
           route: "/login",
           hidden: isAuthenticated,
         },
+        {
+          contentType: "languageToggle",
+        }
       ],
     },
   ],

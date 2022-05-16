@@ -11,13 +11,6 @@ const Budgets = () => {
   return (
     <div>
       Orçamentos
-      <br />
-      <Card title="Titulo" description="descrição">
-        <Button text="Ir para Home" action={onDashboardClick} />
-      </Card>
-      <button class="bg-purple-800 text-white p-2 rounded">
-        Botão vanilla
-      </button>
     </div>
   );
 };

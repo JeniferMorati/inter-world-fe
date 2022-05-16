@@ -1,5 +1,6 @@
 // components: mdb
 import { MDBNavbarNav } from "mdb-react-ui-kit";
+import LanguageToggle from "../LanguageToggle";
 
 // components: atoms
 import NavigationButtonLink from "./NavigationButtonLink";
@@ -33,6 +34,10 @@ export const CONTENT_TYPES = {
   },
   user: {
     componentTag: NavigationUserDropdown,
+    getAttributes: () => ({}),
+  },
+  languageToggle: {
+    componentTag: LanguageToggle,
     getAttributes: () => ({}),
   },
   dropdownLink: {

@@ -1,18 +1,25 @@
 import { useState, useEffect } from "react/cjs/react.development";
 import { createContext, useContext } from "react";
 
+// dictionary
+import selectDictionary from "../dictionary";
+
 const AppContext = createContext({});
 
 const AppProvider = ({ children }) => {
   // TODO: buscar essas informações do banco de dados no primeiro loading com um useEffect
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState({});
+  const [language, setLanguage] = useState("BR");
 
   const value = {
     isAuthenticated,
     setIsAuthenticated,
     user,
     setUser,
+    language,
+    setLanguage,
+    dictionary: selectDictionary(language),
   };
 
   useEffect(() => {

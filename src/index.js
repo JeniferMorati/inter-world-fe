@@ -8,8 +8,13 @@ import { BrowserRouter } from "react-router-dom";
 
 // App
 import AppRouter from "./routes";
-import Navigation from "./components/Navigation";
+
+// context
 import { AppProvider } from "./context";
+
+// componentes
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +22,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Navigation />
         <AppRouter />
+        <Footer />
       </BrowserRouter>
     </AppProvider>
   </React.StrictMode>,
