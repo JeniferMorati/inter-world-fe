@@ -1,5 +1,7 @@
 const Languages = () => {
-  return <div>Página Estude linguás</div>;
+  return (
+    <div>Foda-se</div>
+  );
 };
 
 export default Languages;
