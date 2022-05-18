@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { RecoilRoot } from "recoil";
 import "./index.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
@@ -18,13 +19,15 @@ import Footer from "./components/Footer";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
-      <BrowserRouter>
-        <Navigation />
-        <AppRouter />
-        <Footer />
-      </BrowserRouter>
-    </AppProvider>
+    <RecoilRoot>
+      <AppProvider>
+        <BrowserRouter>
+          <Navigation />
+          <AppRouter />
+          <Footer />
+        </BrowserRouter>
+      </AppProvider>
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
 );
