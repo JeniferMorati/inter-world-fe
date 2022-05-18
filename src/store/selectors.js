@@ -6,7 +6,7 @@ export const selectorGetRatingUsers = selector({
   get: async () => {
     const { data } = await requester({
       baseURL: "https://randomuser.me/api/",
-    }).get("?results=3");
+    }).get("?results=3&nat=br");
 
     const results = data?.results;
 
