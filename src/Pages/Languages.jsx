@@ -1,6 +1,6 @@
 const Languages = () => {
   return (
-    <div>Foda-se</div>
+    <div>languages page</div>
   );
 };
 
