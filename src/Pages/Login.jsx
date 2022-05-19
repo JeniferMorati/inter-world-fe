@@ -3,10 +3,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useAppContext } from "../context";
 import '../login.css'
+import SignUp from './SignUp';
 
 const Login = () => {
-  /*const navigate = useNavigate();
-  const { setIsAuthenticated, setUser } = useAppContext();*/
+  const navigate = useNavigate();
+  /*const { setIsAuthenticated, setUser } = useAppContext();*/
 
   
 
@@ -46,7 +47,7 @@ const [password, setPassword] = useState("");
             <div className="text-center">
               <span className="txt1">Não possui conta? </span>
 
-              <a className="txt2" href="">Criar Conta.</a>
+              <a className="txt2" to="SingUp">Criar Conta.</a>
             </div>
 
 
