@@ -8,12 +8,15 @@ export default function Footer() {
   const dictionary = useDictionary().footer;
 
   return (
-    <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
+    <MDBFooter
+      bgColor="light"
+      className="text-center text-lg-start text-muted mt-5"
+    >
       <section className="d-flex justify-content-center justify-content-lg-between">
         <div className="me-5 d-none d-lg-block"></div>
       </section>
 
-      <section className="">
+      <section className="mt-5">
         <div className="container text-center text-md-start mt-5">
           <div className="row mt-3">
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">

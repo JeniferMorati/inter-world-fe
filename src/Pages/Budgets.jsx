@@ -1,5 +1,8 @@
-const Budgets = () => {
-  return <div>Página Orçamentos</div>;
+import BudgetsContainer from "../Containers/Budgets";
+
+// ::
+const BudgetsContainer = () => {
+  return <BudgetsContainer />;
 };
 
-export default Budgets;
+export default BudgetsContainer;

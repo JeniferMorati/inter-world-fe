@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { RecoilRoot } from "recoil";
 import "./index.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import 'antd/dist/antd.css';
 
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
@@ -16,6 +17,7 @@ import { AppProvider } from "./context";
 // componentes
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+
 
 ReactDOM.render(
   <React.StrictMode>

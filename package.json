@@ -8,6 +8,7 @@
     "Mariana Lourenço <...>"
   ],
   "dependencies": {
+    "antd": "^4.20.5",
     "axios": "^0.27.2",
     "deepmerge": "^4.2.2",
     "mdb-react-ui-kit": "^3.0.0",

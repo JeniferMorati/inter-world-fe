@@ -13,3 +13,14 @@ export const selectorGetRatingUsers = selector({
     return results;
   },
 });
+
+export const selectorGetCountrys = selector({
+  key: "GetCountrys",
+  get: async () => {
+    const { data } = await requester({
+      baseURL: "https://restcountries.com",
+    }).get("/v3.1/all");
+
+    return data;
+  },
+});

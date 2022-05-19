@@ -51,7 +51,6 @@ export const navigationItems = (isAuthenticated) => ({
         },
         {
           contentType: "button",
-          className: "text-dark",
           color: "secondary",
           name: "Login",
           route: "/login",
