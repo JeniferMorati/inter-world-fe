@@ -42,9 +42,42 @@ const dictionary = () => ({
       },
     ],
   },
+  travel: {
+    title: "Países para Intercâmbio",
+    description: "Conheça  os destinos incríveis",
+    description2:"que a InterWorld oferece!",
+    button1:"Orçamento",
+    button2:"Contato",
+    countrie1:"Estados Unidos",
+    city1p: "Localizada no estado de  Massachusetts, Boston é reconhecida por ser o berço da independência americana. Culturalmente diversa, a cidade possui expressivo número de imigrantes irlandeses e portugueses. " ,
+    city2: "Nova Iorque",
+    city2p:"Nova Iorque é a maior cidade dos Estados Unidos. Da população local, 40% é estrangeira e se fala mais de 80 idiomas diferentes. Não é à toa que Nova York é sede de várias empresas e organizações do mundo.",
+    city3p: "Conhecida como a “Cidade dos Ventos”, Chicago surpreende pela diversidade. Reunindo o maior número de parques e praças dos Estados Unidos e reconhecida internacionalmente pela qualidade e modernidade de sua arquitetura, a cidade alia natureza e desenvolvimento.",
+    city4p:"Los Angeles é a cidade mais importante da Califórnia, sendo líder na produção de filmes, séries e músicas. Com inúmeras praias, pontos turísticos e arranha-céus, ela se destaca como uma cidade cheia de atrações para os mais diversos estilos.",
+    
+    
+    countrie2:"Canadá",
+    city5p:"Cosmopolita, multicultural e com vida noturna agitada, atividades é o que não faltam nessa metrópole, que além dessas qualidades, possui um alto índice de qualidade de vida e segurança.Possui  uma estrutura educacional de primeiro mundo e é uma das cidades mais multiculturais do planeta",   
+    city6p:"É um grande centro industrial, comercial e universitário.A cidade é considerada uma das cidades mais seguras do mundo, com um povo super educado e com a maior concentração de estudantes da América do Norte.\
+    Montreal também é a segunda maior cidade de falantes de língua francesa no mundo.",
+    city7p:"Victoria fica na ilha de Vancouver Island e é a capital do estado de British Columbia. A cidade tem um clima europeu e é conhecida como “A Cidade dos Jardins” devido aos lindos e coloridos jardins que estão espalhados por toda a cidade.",
+    city8p:"Foi eleita em 2018 como a melhor cidade para se viver da América do Norte e a 5ª melhor do mundo. A Mercer (uma empresa internacional de consultoria) foi responsável por esse ranking e levou em conta fatores como segurança pessoal, estabilidade, níveis de criminalidade e desempenho da aplicação da lei local.",
+  
+
+    countrie3:"Inglaterra",
+    city9:"Londres",
+    city9p:"A capital da Inglaterra abriga o Palácio de Buckingham que é a residência oficial da realeza britânica, o Parlamento Inglês juntamente com o famoso relógio Big Ben, a London Eye, entre muitos outros atrativos. No entanto, é andando pelas ruas de mão inglesa ou no metrô mais antigo do mundo que você verá a vida londrina acontecer.",
+    city10p:"A cidade dos Beatles é repleta de museus e galerias de arte, sendo considerado o segundo polo cultural da Inglaterra. Ainda na região portuária, em frente ao rio Mersey, há a chamada Liverpool Waterfront, ou Pier Head, podemos encontrar as estátuas dos Beatles que, claro, não podem faltar em nenhum roteiro. Vale a pena a visita!",
+    city11p:"A segunda maior cidade da Inglaterra, situada na região central conhecida por Midlands, Birmingham chama atenção por sua história na Revolução Industrial, lugares interessantes para conhecer e perfeita para quem gosta da série Peaky Blinders. Amantes da música também curtem, já que algumas bandas nasceram aqui como Black Sabbath, Judas Priest e Duran Duran.",
+    city12p:"Cerca de 20% da população local é formada por estudantes entre universitários e intercambistas. A Universidade de Cambridge também é muito famosa por ser considerada durante muitos anos consecutivos uma das melhores universidades do mundo. Nomes como Isaac Newton, Stephen Hawking e Charles Darwin passaram por lá. ",
+  
+    countrie4:"Espanha",
+    city13p:"Um dos principais centros turísticos e econômicos do país, Barcelona atrai milhões de visitantes todos os anos. O clima mediterrâneo é muito agradável e propício para conhecer a cidade a pé ou de bicicleta. A cidade está diretamente ligada ao arquiteto Gaudí, famoso pela construção da Sagrada Família, Parc Guell e La Pedrera.", 
+      
+  },
   footer: {
     aboutUs:
-      "Sua viagem com a melhor agência, venha viajar com a InterWorld, \
+      "Sua viagem com a melhor agência, venha viajar com a InterWorld! \
     a mais de 10 anos no mercado, contamos com os melhores preços de \
     passagem, hoteis e companhias aéreas presente em mais de 20 \
     países, entre eles Canada, Estados Unidos, Russia, Portugal.",
