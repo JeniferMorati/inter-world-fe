@@ -6,7 +6,7 @@ import '../login.css'
 import SignUp from './SignUp';
 
 const Login = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   /*const { setIsAuthenticated, setUser } = useAppContext();*/
 
   

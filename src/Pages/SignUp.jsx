@@ -68,14 +68,6 @@ const SignUp = () => {
               <button className="login-form-btn">Cadastrar</button>
             </div>
 
-
-            <div className="text-center">
-              <span className="txt1">Não possui conta? </span>
-
-              <a className="txt2" href="">Criar Conta.</a>
-            </div>
-
-
           </form>
 
         </div>

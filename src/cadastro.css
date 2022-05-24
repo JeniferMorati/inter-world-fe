@@ -20,12 +20,12 @@
 
     padding: 15px;
 
-    background-color:#292929;
+    background-color:white;
 }
 
 .wrap-login{
     width: 390px;
-    background-color: #444343;
+    background-color: 	#DCDCDC;
     border-radius: 10px;
 
     overflow: hidden;
@@ -39,7 +39,7 @@
 .login-from-title{
     display: block;
     font-size: 30px;
-    color: #ECCEF5;
+    color: black;
 
     line-height: 1.2;
     text-align: center;
@@ -55,7 +55,7 @@
 
 .input{
     font-size: 12px;
-    color: #aff;
+    color: black;
     line-height: 1.2;
     border: none;
     display: block;
@@ -177,7 +177,7 @@
 
 .txt1{
     font-size: 15px;
-    color: white;
+    color: black;
     line-height: 1.5;
     padding-right: 5px;
     text-decoration: none;
