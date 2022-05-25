@@ -12,8 +12,8 @@ const Faq = () => {
       <h3 className="text-center mb-4 pb-2 text-secondary fw-bold">FAQ</h3>
       <p className="text-center mb-5">{dictionary?.disclaimer}</p>
       <div className="row">
-        {dictionary?.questions?.map((item) => (
-          <div className="col-md-6 col-lg-4 mb-4">
+        {dictionary?.questions?.map((item, index) => (
+          <div key={`faq-${index}`} className="col-md-6 col-lg-4 mb-4">
             <h6 className="mb-3 text-secondary">
               <i className={`${item.icon} text-secondary pe-2`}></i>
               {item.question}

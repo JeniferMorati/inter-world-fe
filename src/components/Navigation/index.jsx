@@ -17,6 +17,8 @@ import { useNavigate } from "react-router";
 import { CONTENT_TYPES } from "./contentTypes";
 import { navigationItems } from "./config";
 import { useAppContext } from "../../context";
+import { atomCurrentUser } from "../../store/atoms";
+import { useRecoilValue } from "recoil";
 
 // recursive render navigation function
 const getItemContentType = (item) => {
@@ -36,18 +38,25 @@ const getItemContentType = (item) => {
 };
 
 const getAllItemsComponents = (item) => {
-  const codeKey = `render-${Math.random(new Date()).toFixed(5).toString().replace("0.", "")}`
+  const codeKey = `render-${Math.random(new Date())
+    .toFixed(5)
+    .toString()
+    .replace("0.", "")}`;
   const children =
     item.items && !item.hidden ? item.items.map(getAllItemsComponents) : [];
   const { componentTag, attributes } = getItemContentType(item);
   const Component = componentTag;
-  return <Component key={codeKey} {...attributes}>{children}</Component>;
+  return (
+    <Component key={codeKey} {...attributes}>
+      {children}
+    </Component>
+  );
 };
 
 // ::
 const Navigation = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useAppContext();
+  const user = useRecoilValue(atomCurrentUser);
   const [showBasic, setShowBasic] = useState(false);
 
   return (
@@ -67,7 +76,7 @@ const Navigation = () => {
         </MDBNavbarToggler>
 
         <MDBCollapse navbar show={showBasic}>
-          {navigationItems(isAuthenticated).menu.map(getAllItemsComponents)}
+          {navigationItems(!!user?.displayName).menu.map(getAllItemsComponents)}
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>

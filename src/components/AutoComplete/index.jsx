@@ -1,8 +1,9 @@
 import { useEffect, useState, memo } from "react";
-import { Input, AutoComplete } from "antd";
+import { Input, AutoComplete, Space } from "antd";
 
 const Complete = ({ items }) => {
   const [optionsList, setOptionsList] = useState([]);
+  const [destiny, setDestiny] = useState({});
 
   const renderTitle = (title) => <span>{title}</span>;
 
@@ -10,6 +11,7 @@ const Complete = ({ items }) => {
     value: title,
     label: (
       <div
+        onClick={() => setDestiny({ title, img })}
         style={{
           display: "flex",
           justifyContent: "flex-start",
@@ -25,7 +27,9 @@ const Complete = ({ items }) => {
   const onSearch = (value) => {
     if (items?.length > 0) {
       mountOptionsList(
-        items.filter((country) => country?.name?.common?.toLowerCase().includes(value.toLowerCase()))
+        items.filter((country) =>
+          country?.name?.common?.toLowerCase().includes(value.toLowerCase())
+        )
       );
       if (value === "") mountOptionsList();
     }
@@ -67,7 +71,11 @@ const Complete = ({ items }) => {
       options={optionsList}
       onSearch={onSearch}
     >
-      <Input.Search size="large" placeholder="Qual o seu destino?" className="w-100" />
+      <Input.Search
+        size="large"
+        placeholder="Qual o seu destino?"
+        className="w-100"
+      />
     </AutoComplete>
   );
 };

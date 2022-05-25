@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useRecoilValue } from "recoil";
 import { useAppContext } from "../context";
 import '../login.css'
 import SignUp from './SignUp';

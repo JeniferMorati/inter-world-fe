@@ -34,7 +34,9 @@ export const CONTENT_TYPES = {
   },
   user: {
     componentTag: NavigationUserDropdown,
-    getAttributes: () => ({}),
+    getAttributes: (item) => ({
+      dropdownItems: item.dropdownItems,
+    }),
   },
   languageToggle: {
     componentTag: LanguageToggle,
@@ -45,6 +47,7 @@ export const CONTENT_TYPES = {
     getAttributes: (item) => ({
       name: item.name,
       route: item.route,
+      variant: item.variant,
     }),
   },
 };

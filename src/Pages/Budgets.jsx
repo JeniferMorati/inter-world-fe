@@ -1,8 +1,8 @@
 import BudgetsContainer from "../Containers/Budgets";
 
 // ::
-const BudgetsContainer = () => {
+const BudgetsPage = () => {
   return <BudgetsContainer />;
 };
 
-export default BudgetsContainer;
+export default BudgetsPage;

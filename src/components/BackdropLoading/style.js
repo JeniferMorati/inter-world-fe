@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BackDrop = styled.div`
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   overflow: hidden;

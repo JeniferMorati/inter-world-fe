@@ -4,11 +4,10 @@ import { useAppContext } from "../context";
 
 const Logout = () => {
   const navigate = useNavigate();
-  const { setIsAuthenticated } = useAppContext();
+  const { signOut } = useAppContext();
 
   useEffect(() => {
-    setIsAuthenticated(false);
-    navigate("/");
+    signOut();
   }, []);
 
   return <div>Página Lougout</div>;
