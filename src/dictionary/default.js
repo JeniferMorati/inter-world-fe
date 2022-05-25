@@ -95,7 +95,7 @@ const dictionary = () => ({
     description1: "Descubra um pouco mais",
     description2:" sobre a nossa organização!",
     aboutus:"Sobre nós",
-    textaboutus:"Fundamos a Interworld em 2012 com o objetivo de oferecer não apenas intercâmbios, e sim projetos de vida. O projeto da Interworld começou pequeno, com apenas 5 integrantes e hoje contamos com mais de 100 profissionais para atender todas as necessidades de nossos alunos, com total dedição e comprometimento. Nossa meta é transformar o intercâmbio em uma experiência única na vida do intercambista e uma grande oportunidade profissional.",
+    textaboutus:"Fundamos a Interworld em 2010 com o objetivo de oferecer não apenas intercâmbios, e sim projetos de vida. O projeto da Interworld começou pequeno, com apenas 5 integrantes e hoje contamos com mais de 100 profissionais para atender todas as necessidades de nossos alunos, com total dedição e comprometimento. Nossa meta é transformar o intercâmbio em uma experiência única na vida do intercambista e uma grande oportunidade profissional.",
     mission: "Missão",
     missionp:"Viabilizar intercâmbios culturais e viagens turísticas e de negócios adequados ao perfil de cada cliente, comprometendo-se com a qualidade de atendimento, inclusive durante a vivência internacional.",
     visionp:"Ser considerada a melhor empresa de intercâmbio cultural e turismo do Brasil e do mundo!",
@@ -109,9 +109,9 @@ const dictionary = () => ({
   footer: {
     aboutUs:
       "Sua viagem com a melhor agência, venha viajar com a InterWorld! \
-    a mais de 10 anos no mercado, contamos com os melhores preços de \
-    passagem, hoteis e companhias aéreas presente em mais de 20 \
-    países, entre eles Canada, Estados Unidos, Russia, Portugal.",
+    A mais de 10 anos no mercado, contamos com os melhores preços de \
+    passagem, hoteis e companhias aéreas presente 5 \
+    países, entre eles Estados Unidos, Canadá, Inglaterra, Espanha e Paris",
   },
 });
 

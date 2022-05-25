@@ -5,7 +5,6 @@ import aboutstyle from '../Pages/About.module.css'
 import timeline from '../Pages/timeline.module.css'
 import sliderimg from '../img/about/slider.png'
 import values from '../img/about/values.png'
-
 import missao from '../img/about/mission.png'
 import vision from '../img/about/vision.png'
 import CardAbout from '../CardAbout'
@@ -16,6 +15,8 @@ import CardAbout from '../CardAbout'
 const Home = () => {
   const dictionary = useDictionary().about;
   return (
+   
+    <body>
     <main>
 
 <section className=" ">
@@ -53,6 +54,7 @@ const Home = () => {
 
       
     </main>
+    </body>
   
   
   )

@@ -48,7 +48,7 @@ const dictionary = () => ({
     description2:"that InterWorld offers!",
     button1:"Budget",
     button2:"Contact",
-    countrie1:"Unit States",
+    countrie1:"United States",
     city1p:"Located in the state of Massachusetts, Boston is recognized for being the birthplace of American independence. Culturally diverse, the city has a significant number of Irish and Portuguese immigrants.",
     city2: "New York",
     city2p:"New York is the largest city in the United States. Of the local population, 40% is foreign and more than 80 different languages ​​are spoken. No wonder New York is home to several companies and organizations around the world.",
@@ -69,8 +69,7 @@ const dictionary = () => ({
     city9p:"The capital of England is home to Buckingham Palace which is the official residence of British royalty, the English Parliament along with the famous Big Ben clock, the London Eye, among many other attractions. However, it's walking through the English-hand streets or on the oldest subway in the world that you'll see London life unfold.",
     city10p:"The Beatles' city is full of museums and art galleries, being considered the second cultural center in England. Also in the port area, in front of the River Mersey, there is the so-called Liverpool Waterfront, or Pier Head, we can find the Beatles statues that, of course, cannot be missing in any itinerary. It's worth the visit!",
     city11p:"The second largest city in England, located in the central region known as the Midlands, Birmingham stands out for its history in the Industrial Revolution, interesting places to visit and perfect for those who love the Peaky Blinders series. Music lovers will also enjoy it, as some bands were born here like Black Sabbath, Judas Priest and Duran Duran.",
-    city12p:"Cerca de 20% da população local é formada por estudantes entre universitários e intercambistas. A Universidade de Cambridge também é muito famosa por ser considerada durante muitos anos consecutivos uma das melhores universidades do mundo. Nomes como Isaac Newton, Stephen Hawking e Charles Darwin passaram por lá.",
-
+    city12p:"About 20% of the local population is insured by students between university and exchange students. The University of Cambridge is also very famous for being considered for many consecutive years one of the best universities in the world. Names like Isaac Newton, Stephen Hawking and Charles Darwin were judged there.",
 
     countrie4:"Spain",
     city13p:"For those who like art and history, the city is full of imposing historical buildings and museums with the main collections in Europe. During the day, you can also stroll and shop along Gran Vía, visit El Retiro Parks and the Temple of Debod, which is said to be the best place to watch the sunset in the city.",
@@ -88,7 +87,7 @@ const dictionary = () => ({
     title:"Meet the Interworld",
     button:"#BeInterWorld",
     aboutus:"About us",
-    textaboutus: "We founded Interworld in 2012 with the aim of offering not only exchanges, but life projects. The Interworld project started small, with only 5 members and today we have more than 100 professionals to meet all the needs of our students, with total dedication and commitment. Our goal is to transform the exchange into a unique experience in the exchange student's life and a great professional opportunity.",
+    textaboutus: "We founded Interworld in 2010 with the aim of offering not only exchanges, but life projects. The Interworld project started small, with only 5 members and today we have more than 100 professionals to meet all the needs of our students, with total dedication and commitment. Our goal is to transform the exchange into a unique experience in the exchange student's life and a great professional opportunity.",
     mission: "Mission",
     missionp:"Facilitate cultural exchanges and tourist and business trips to the profile of each client, committing to the quality of service, including during an international experience.",
     vision: "Vision",
@@ -98,10 +97,10 @@ const dictionary = () => ({
   },
   footer: {
     aboutUs:
-      "Your travel with the best agency, come travel with InterWorld, \
-      more than 10 years in the market, we have the best prices of \
-      tickets, hotels and airlines present in more than 20 \
-      countries, among them Canada, United States, Russia, Portugal.",
+      "Your trip with the best agency, come travel with InterWorld! \
+      With more than 10 years in the market, we have the best prices in \
+      tickets, hotels and airlines present 5 \
+      countries, including the United States, Canada, England, Spain and Paris",
   },
 });
 
