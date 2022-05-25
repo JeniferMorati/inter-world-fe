@@ -1,20 +1,57 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useRecoilValue } from "recoil";
 import { useAppContext } from "../context";
-import { atomCurrentUser } from "../store/atoms";
+import "../login.css";
+import SignUp from "./SignUp";
 
 const Login = () => {
-  const user = useRecoilValue(atomCurrentUser);
-  const { signInGoogle } = useAppContext();
-  const navigateTo = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  return (
+    <div className="container">
+      <div className="container-login">
+        <div className="wrap-login">
+          <form className="login-form">
+            <span className="login-from-title">Login</span>
 
-  const handleLoginFromGoogle = async () => {
-    await signInGoogle();
-  };
+            <div className="wrap-input">
+              <input
+                className={email !== "" ? "has-val input" : "input"}
+                value={email}
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <span className="focus-input" data-placeholder="email"></span>
+            </div>
 
-  if (user) navigateTo("/");
+            <div className="wrap-input">
+              <input
+                className={password !== "" ? "has-val input" : "input"}
+                value={password}
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span className="focus-input" data-placeholder="password"></span>
+            </div>
 
-  return <button onClick={handleLoginFromGoogle}>Logar com o Google</button>;
+            <div className="container-login-form-btn">
+              <button className="login-form-btn">Login</button>
+            </div>
+
+            <div className="text-center">
+              <span className="txt1">Não possui conta? </span>
+
+              <a className="txt2" to="SingUp">
+                Criar Conta.
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Login;
