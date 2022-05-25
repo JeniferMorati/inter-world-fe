@@ -18,16 +18,16 @@ const Home = () => {
   return (
     <main>
 
-<section id="slider" className=" ">
-        <div className={`container pt-2  ${aboutstyle.marginslide}`}>
+<section className=" ">
+        <div className={`container  ${aboutstyle.marginslide}`}>
           <div className={`row  d-flex justify-content-center ${styles.containerslider}`}>
-            <div className={`col-lg-4 col-md-6 align-self-center mb-md-0 mb-4 ${styles.textslider}`}>
-              <h1 className={styles.h1}>{dictionary?.title}</h1>
+            <div className={`col-lg-4 col-md-6 align-self-center mb-md-0 mb-4 pt-3 ${styles.textslider}`}>
+              <h1 className={styles.h1} >{dictionary?.title}</h1>
               <h4 className={`mb-4 mt-3`}>{dictionary?.description1} <br /> {dictionary?.description2}</h4>
             <div className={`${styles.divbuttons}`}>
               <a
-                 path="/cadastrar"
-                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 disabled  ${styles.buttons}`}
+                 path=""
+                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 disabled  ${styles.buttons} ${styles.button1}`} style={{backgrounColor:"#b23cfd"}}
               >{dictionary?.button}</a>
               </div>
             </div>

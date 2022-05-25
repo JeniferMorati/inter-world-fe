@@ -29,10 +29,10 @@ function Home() {
                 href="/orcamentos"
                 className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 ${styles.buttons} ${styles.button1}`}
               > {dictionary?.button1} </a>
-              <a
+              {/* <a
                 href="#"
                 className={`button btn btn-outline-primary button-primary-outline d-md-inline-block d-block ${styles.buttons} ${styles.buttoncontact}`}
-              >{dictionary?.button2}</a>
+              >{dictionary?.button2}</a> */}
               </div>
             </div>
             <div className={`col-lg-8 col-md-4 text-center ${styles.divimg}`}>

@@ -73,7 +73,15 @@ const dictionary = () => ({
 
 
     countrie4:"Spain",
-    city13p:"One of the main tourist and economic centers in the country, Barcelona attracts millions of visitors every year. The Mediterranean climate is very pleasant and suitable for exploring the city on foot or by bicycle. The city is directly linked to the architect Gaudí, famous for the construction of the Sagrada Familia, Parc Guell and La Pedrera.", 
+    city13p:"For those who like art and history, the city is full of imposing historical buildings and museums with the main collections in Europe. During the day, you can also stroll and shop along Gran Vía, visit El Retiro Parks and the Temple of Debod, which is said to be the best place to watch the sunset in the city.",
+    city14p:"One of the main tourist and economic centers in the country, Barcelona attracts millions of visitors every year. The Mediterranean climate is very pleasant and suitable for exploring the city on foot or by bicycle. The city is directly linked to the architect Gaudí, famous for the construction of the Sagrada Familia, Parc Guell and La Pedrera.", 
+    city15p:"The city has so many historical attractions that we recommend visiting at least four days. There is no shortage of historic attractions in Seville. The city has a very rich past, it was controlled by the Arabs and, more recently, by the Christians, people who left an incomparable architectural legacy. Seville Cathedral is a true monument to Christian glory, it is the third largest church in the world and took over a century to complete",
+    city16p:"Fountains, viewpoints and Cármenes, the houses surrounded by gardens that are characteristic of this city, contribute to creating unforgettable places. It's no wonder that one of its old neighbourhoods, the Albaicín, is a World Heritage Site along with La Alhambra and the Generalife. An important cultural center for several centuries, both during the Muslim and Christian governments, Granada currently enjoys an enviable cultural and leisure agenda.",   
+    
+    city17p:"Considered one of the most romantic cities in the world, Paris is undoubtedly a destination that has a lot to offer. In addition to a breathtaking architectural ensemble, imposing monuments and flowering gardens, first-class cuisine is sure to win over any traveler.",
+    city18p:"Innovative architectural buildings. Excellent hospitality and cuisine. And 2,600 years of historic heritage. This is Marseille, the second largest – and oldest – city in France. Located 776 miles from the capital, it appeared in 600 BC, by the work of the Greeks.",
+    city19p:"Studying abroad in Lyon is living in a city that offers all the privileges of life in France, but without the stress typical of a capital. With just over 500,000 inhabitants, Lyon is situated in the historic Rhône-Alpes region and is the third largest city in the country.",
+    city20p:"Coastal city, located in the south of France, is one of the most sought after destinations in the country. Sunny all year round, it receives an average of 4 million tourists throughout the year, who go after its beautiful beaches and landscapes.",
     Budget:"Ask for budget"
   },
   about: {

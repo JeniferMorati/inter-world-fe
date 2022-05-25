@@ -32,20 +32,21 @@ const Home = () => {
     <main>
 
       <section className="pl-n-5">
-        <div className="container">
+        <div className="container " id={styles.margin}>
           <div className={`row d-flex ${styles.containerslider}`}>
             <div className={`col-lg-4 col-md-6 align-self-center mb-md-0 mb-4 ${styles.textslider}`}>
               <h1 className={styles.h1}> {dictionary?.title} <br /> {dictionary?.title1}</h1>
-              <h4 className={`mb-4 mt-3`}>{dictionary?.description} <br /> {dictionary?.description2}</h4>
+              <h4 className={`mb-4 mt-3 text-xs-center `}>{dictionary?.description} <br /> {dictionary?.description2}</h4>
             <div className={`${styles.divbuttons}`}>
               <a
                 href="/orcamentos"
-                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 ${styles.buttons} ${styles.button1}`}
+                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 ${styles.buttons} ${styles.button1}`} 
+          
               > {dictionary?.button1} </a>
-              <a
+              {/* <a
                 href="#"
                 className={`button btn btn-outline-primary button-primary-outline d-md-inline-block d-block ${styles.buttons} ${styles.buttoncontact}`}
-              >{dictionary?.button2}</a>
+              >{dictionary?.button2}</a> */}
               </div>
             </div>
             <div className={`col-lg-8 col-md-4 text-center ${styles.divimg}`}>
@@ -69,14 +70,14 @@ const Home = () => {
         cidade2="Liverpool" cidade2p={dictionary?.city10p} image2={img10}
         cidade3 ="Brigha"  cidade3p={dictionary?.city11p} image3={img11}
         cidade4 ="Cambridge" cidade4p={dictionary?.city12p} image4={img12} ></CardTravel>
-        <CardTravel pais={dictionary?.countrie4} cidade1='Barcelona' cidade1p={dictionary?.city13p} image1={img13}
-        cidade2=''cidade2p='' image2={img14}
-        cidade3=''cidade3p='' image3={img15}
-        cidade4=''cidade4p='' image4={img16}></CardTravel>
-        <CardTravel pais={dictionary?.countrie5} cidade1=''cidade1p='' image1={img17}
-        cidade2=''cidade2p='' image2={img18}
-        cidade3=''cidade3p='' image3={img19}
-        cidade4=''cidade4p='' image4={img20}></CardTravel>
+        <CardTravel pais={dictionary?.countrie4} cidade1='Madrid' cidade1p={dictionary?.city13p} image1={img13}
+        cidade2='Barcelona'cidade2p={dictionary?.city14p} image2={img14}
+        cidade3='Sevilha'cidade3p={dictionary?.city15p} image3={img15}
+        cidade4='Granada'cidade4p={dictionary?.city16p} image4={img16}></CardTravel>
+        <CardTravel pais={dictionary?.countrie5} cidade1='Paris'cidade1p={dictionary?.city17p} image1={img17}
+        cidade2='Marselha'cidade2p={dictionary?.city18p} image2={img18}
+        cidade3='Lyon'cidade3p={dictionary?.city19p} image3={img19}
+        cidade4='Nice'cidade4p={dictionary?.city20p} image4={img20}></CardTravel>
         </div>
       </section>
     </main>
