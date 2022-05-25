@@ -1,5 +1,11 @@
 const dictionary = () => ({
   home: {
+    slidertext1:"Faça o seu intercâmbio",
+    slidertext2:" em 2022!",
+    description1:"Conheça novas culturas e",
+    description2: "viva experiências inesquecíveis!",
+    button1:"Orçamento",
+    button2:"Contato",
     title: "Conheça os principais destinos!",
   },
   faq: {
@@ -73,8 +79,25 @@ const dictionary = () => ({
   
     countrie4:"Espanha",
     city13p:"Um dos principais centros turísticos e econômicos do país, Barcelona atrai milhões de visitantes todos os anos. O clima mediterrâneo é muito agradável e propício para conhecer a cidade a pé ou de bicicleta. A cidade está diretamente ligada ao arquiteto Gaudí, famoso pela construção da Sagrada Família, Parc Guell e La Pedrera.", 
-      
+    Budget: "Pedir Orçamento!",
   },
+  about: {
+    title:"Conheça a InterWorld",
+    button:"#SejaInterWorld",
+    description1: "Descubra um pouco mais",
+    description2:" sobre a nossa organização!",
+    aboutus:"Sobre nós",
+    textaboutus:"Fundamos a Interworld em 2012 com o objetivo de oferecer não apenas intercâmbios, e sim projetos de vida. O projeto da Interworld começou pequeno, com apenas 5 integrantes e hoje contamos com mais de 100 profissionais para atender todas as necessidades de nossos alunos, com total dedição e comprometimento. Nossa meta é transformar o intercâmbio em uma experiência única na vida do intercambista e uma grande oportunidade profissional.",
+    mission: "Missão",
+    missionp:"Viabilizar intercâmbios culturais e viagens turísticas e de negócios adequados ao perfil de cada cliente, comprometendo-se com a qualidade de atendimento, inclusive durante a vivência internacional.",
+    visionp:"Ser considerada a melhor empresa de intercâmbio cultural e turismo do Brasil e do mundo!",
+    vision: "Visão",
+    values: "Valores",
+    valuesp: "Qualidade, seriedade, excelência, competência, ética, credibilidade e inovação.",   
+
+  },
+
+
   footer: {
     aboutUs:
       "Sua viagem com a melhor agência, venha viajar com a InterWorld! \

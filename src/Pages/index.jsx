@@ -1,3 +1,4 @@
+import React from 'react';
 import About from "./About";
 import Budgets from "./Budgets";
 import Languages from "./Languages";

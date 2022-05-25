@@ -42,7 +42,8 @@ const dictionary = () => ({
     ],
   },
   travel: {
-    title: "Exchange Countries",
+    title: "Exchange",
+    title1: "Countries",
     description: "Discover the amazing destinations",
     description2:"that InterWorld offers!",
     button1:"Budget",
@@ -73,9 +74,20 @@ const dictionary = () => ({
 
     countrie4:"Spain",
     city13p:"One of the main tourist and economic centers in the country, Barcelona attracts millions of visitors every year. The Mediterranean climate is very pleasant and suitable for exploring the city on foot or by bicycle. The city is directly linked to the architect Gaudí, famous for the construction of the Sagrada Familia, Parc Guell and La Pedrera.", 
-    
+    Budget:"Ask for budget"
   },
-
+  about: {
+    title:"Meet the Interworld",
+    button:"#BeInterWorld",
+    aboutus:"About us",
+    textaboutus: "We founded Interworld in 2012 with the aim of offering not only exchanges, but life projects. The Interworld project started small, with only 5 members and today we have more than 100 professionals to meet all the needs of our students, with total dedication and commitment. Our goal is to transform the exchange into a unique experience in the exchange student's life and a great professional opportunity.",
+    mission: "Mission",
+    missionp:"Facilitate cultural exchanges and tourist and business trips to the profile of each client, committing to the quality of service, including during an international experience.",
+    vision: "Vision",
+    visionp:"To be considered the best cultural exchange and tourism company in Brazil and the world!",
+    values: "Values",
+    valuesp:"Quality, seriousness, excellence, competence, ethics, credibility and innovation.",
+  },
   footer: {
     aboutUs:
       "Your travel with the best agency, come travel with InterWorld, \
