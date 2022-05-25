@@ -1,5 +1,6 @@
 import { selector } from "recoil";
 import { requester } from "../services/requester";
+import { atomCurrentUser } from "./atoms";
 
 export const selectorGetRatingUsers = selector({
   key: "GetRatingUsers",

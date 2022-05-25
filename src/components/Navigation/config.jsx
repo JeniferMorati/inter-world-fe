@@ -1,5 +1,7 @@
 // TODO: importar estado de "isAuthenticated" de um contexto global da aplicação
 
+import NavigationDropdownLink from "./NavigationDropdownLink";
+
 export const navigationItems = (isAuthenticated) => ({
   menu: [
     {
@@ -32,11 +34,10 @@ export const navigationItems = (isAuthenticated) => ({
         {
           contentType: "user",
           hidden: !isAuthenticated,
-          items: [
+          dropdownItems: [
             {
-              contentType: "dropdownLink",
-              name: "Sair",
-              route: "/sair",
+              label: <NavigationDropdownLink name="Sair" variant="logout" />,
+              key: "0",
             },
           ],
         },
@@ -58,7 +59,7 @@ export const navigationItems = (isAuthenticated) => ({
         },
         {
           contentType: "languageToggle",
-        }
+        },
       ],
     },
   ],

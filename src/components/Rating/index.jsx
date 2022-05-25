@@ -48,7 +48,6 @@ const Reating = () => {
                 width="150"
                 height="150"
               />
-              {console.log(comments)}
             </div>
             <h5 className="mb-3">
               {item?.name?.first} {item?.name?.last}

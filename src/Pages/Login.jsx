@@ -1,21 +1,20 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import { useRecoilValue } from "recoil";
 import { useAppContext } from "../context";
+import { atomCurrentUser } from "../store/atoms";
 
 const Login = () => {
-  const navigate = useNavigate();
-  const { setIsAuthenticated, setUser } = useAppContext();
+  const user = useRecoilValue(atomCurrentUser);
+  const { signInGoogle } = useAppContext();
+  const navigateTo = useNavigate();
 
-  // TODO: fazer uma página de login real
-  useEffect(() => {
-    setUser({
-      name: "Luke Skywalker",
-      country: "ABY",
-    });
-    navigate("/");
-  }, []);
+  const handleLoginFromGoogle = async () => {
+    await signInGoogle();
+  };
 
-  return <div>Página Login</div>;
+  if (user) navigateTo("/");
+
+  return <button onClick={handleLoginFromGoogle}>Logar com o Google</button>;
 };
 
 export default Login;

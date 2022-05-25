@@ -1,4 +1,6 @@
 // components: mdb
+import { Avatar, Dropdown, Menu, Space } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 import {
   MDBDropdown,
   MDBDropdownItem,
@@ -7,37 +9,33 @@ import {
   MDBIcon,
   MDBNavbarItem,
 } from "mdb-react-ui-kit";
+import { useRecoilValue } from "recoil";
 
 // styled-components
 import styled from "styled-components";
 
 // context
 import { useAppContext } from "../../../context";
+import { atomCurrentUser } from "../../../store/atoms";
 
 //::
-const NavigationUserDropdown = ({ children }) => {
-  const { user } = useAppContext();
+const NavigationUserDropdown = ({ dropdownItems }) => {
+  const user = useRecoilValue(atomCurrentUser);
 
-  // wrappers
-  const DropdownToggleWrapper = styled(MDBDropdownToggle)`
-    min-width: 220px;
-  `;
-
-  const DropdownMenuWrapper = styled(MDBDropdownMenu)`
-    min-width: 220px;
-  `;
+  const menu = <Menu items={dropdownItems} />;
 
   return (
     <MDBNavbarItem>
-      <MDBDropdown>
-        <DropdownToggleWrapper tag="a" className="btn btn-warning text-dark width-100">
-          <MDBIcon icon="user" />
-          <span className="m-4">{user?.name}</span>
-        </DropdownToggleWrapper>
-        <DropdownMenuWrapper>
-          <MDBDropdownItem>{children}</MDBDropdownItem>
-        </DropdownMenuWrapper>
-      </MDBDropdown>
+      <Dropdown overlay={menu} trigger={["click"]}>
+        <a
+          onClick={(event) => event.preventDefault()}
+          className="d-flex justify-content-center align-items-center"
+        >
+          <Avatar size="large" src={user?.photoURL} />
+          <span className="m-2 text-dark">{user?.displayName}</span>
+          <DownOutlined className="text-secondary" />
+        </a>
+      </Dropdown>
     </MDBNavbarItem>
   );
 };
