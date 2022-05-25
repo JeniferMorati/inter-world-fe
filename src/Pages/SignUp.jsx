@@ -3,16 +3,26 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useAppContext } from "../context";
 import "../cadastro.css";
+import { useRecoilValue } from "recoil";
+import { atomCurrentUser } from "../store/atoms";
 
 const SignUp = () => {
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
 
-  if ((user && user.name) || isAuthenticated) return navigate("/");
+  // local: states
   const [email, setEmail] = useState("");
   const [surname, setSurname] = useState("");
   const [password, setPassword] = useState("");
+
+  // recoil: states
+  const user = useRecoilValue(atomCurrentUser);
+
+  useEffect(() => {
+    if (Object.keys(user).length > 0) navigate("/");
+  }, [user]);
+
   return (
     <div className="container">
       <div className="container-login">

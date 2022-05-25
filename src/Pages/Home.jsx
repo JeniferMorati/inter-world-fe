@@ -36,8 +36,10 @@ function Home() {
       <Faq />
       <section>
         <div className="row d-flex justify-content-center">
-          <div className="col-md-10 col-xl-8 text-center">
-            <h3 className="mb-4">Depoimentos</h3>
+          <div className="d-flex flex-column col-md-10 col-xl-8 text-center">
+            <div>
+              <h3 className="mb-4">Depoimentos</h3>
+            </div>
             <p className="mb-4 pb-2 mb-md-5 pb-md-0">
               Conheça alguns depoimentos de pessoas que realizaram seu sonho de
               viagem pelo mundo pela nossa agência.
