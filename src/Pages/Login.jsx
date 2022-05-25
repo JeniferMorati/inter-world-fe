@@ -4,9 +4,9 @@ import { useNavigate } from "react-router";
 import { useRecoilValue } from "recoil";
 import { useAppContext } from "../context";
 import { atomCurrentUser } from "../store/atoms";
-import { Button, Space } from "antd";
-import "../login.css";
+import { Button } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
+import "../login.css";
 
 const Login = () => {
   const navigateTo = useNavigate();

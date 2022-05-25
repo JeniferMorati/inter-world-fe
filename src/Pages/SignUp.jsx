@@ -1,10 +1,9 @@
-import { MDBBtn, MDBContainer, MDBInputGroup } from "mdb-react-ui-kit";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { useAppContext } from "../context";
-import "../cadastro.css";
 import { useRecoilValue } from "recoil";
 import { atomCurrentUser } from "../store/atoms";
+
+import "../cadastro.css";
 
 const SignUp = () => {
   const navigate = useNavigate();
