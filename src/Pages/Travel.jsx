@@ -1,3 +1,4 @@
+import React from 'react';
 import sliderimg from '../img/travel/slidertravel.png'
 import CardTravel from '../CardTravel.jsx'
 import styles from '../Pages/Travel.module.css'
@@ -31,15 +32,15 @@ const Home = () => {
     <main>
 
       <section className="pl-n-5">
-        <div className="container pt-2">
+        <div className="container">
           <div className={`row d-flex ${styles.containerslider}`}>
             <div className={`col-lg-4 col-md-6 align-self-center mb-md-0 mb-4 ${styles.textslider}`}>
-              <h1 className={styles.h1}> {dictionary?.title} </h1>
+              <h1 className={styles.h1}> {dictionary?.title} <br /> {dictionary?.title1}</h1>
               <h4 className={`mb-4 mt-3`}>{dictionary?.description} <br /> {dictionary?.description2}</h4>
             <div className={`${styles.divbuttons}`}>
               <a
-                href="#"
-                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 ${styles.buttons}`}
+                href="/orcamentos"
+                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 ${styles.buttons} ${styles.button1}`}
               > {dictionary?.button1} </a>
               <a
                 href="#"

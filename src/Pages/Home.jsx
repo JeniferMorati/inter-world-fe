@@ -1,5 +1,9 @@
+import React from 'react';
 // context
 import { useDictionary } from "../hooks/useDictionary";
+// CSS
+import styles from '../Pages/Travel.module.css'
+import sliderimg from '../img/home/slider.png'
 
 // components
 import LanguageToggle from "../components/LanguageToggle";
@@ -14,7 +18,30 @@ function Home() {
 
   return (
     <MDBContainer>
-      <section>
+        <section className="pl-n-5">
+        <div className="container">
+          <div className={`row d-flex ${styles.containerslider}`}>
+            <div className={`col-lg-4 col-md-6 align-self-center mb-md-0 mb-4 ${styles.textslider}`}>
+              <h1 className={styles.h1}> {dictionary?.slidertext1} <br /> {dictionary?.slidertext2} </h1>
+              <h4 className={`mb-4 mt-4`}>{dictionary?.description1} <br /> {dictionary?.description2}</h4>
+            <div className={`${styles.divbuttons}`}>
+              <a
+                href="/orcamentos"
+                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 ${styles.buttons} ${styles.button1}`}
+              > {dictionary?.button1} </a>
+              <a
+                href="#"
+                className={`button btn btn-outline-primary button-primary-outline d-md-inline-block d-block ${styles.buttons} ${styles.buttoncontact}`}
+              >{dictionary?.button2}</a>
+              </div>
+            </div>
+            <div className={`col-lg-8 col-md-4 text-center ${styles.divimg}`}>
+              <img src={sliderimg} className={`img-fluid ${styles.img}`} style={{width: "90%"}}/>
+            </div>
+          </div>
+          </div>
+      </section>
+      <section className='pt-5'>
         <h3 className="text-center mb-4 pb-2 text-secondary fw-bold">
           {dictionary?.title}
         </h3>

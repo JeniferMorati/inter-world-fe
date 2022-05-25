@@ -1,14 +1,13 @@
+import React  from 'react';
 // components: mdb
-import { MDBDropdownItem, MDBDropdownLink } from "mdb-react-ui-kit";
+
+import { MDBBtn, MDBNavbarItem } from "mdb-react-ui-kit";
 
 // router
 import { useNavigate } from "react-router";
 import { useSetRecoilState } from "recoil";
 import { useAppContext } from "../../../context";
 import { atomCurrentUser } from "../../../store/atoms";
-
-// components: atoms
-import * as Atom from "../atoms";
 
 // ::
 const NavigationDropdownLink = ({ name, route, variant }) => {

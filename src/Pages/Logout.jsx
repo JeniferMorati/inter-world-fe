@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useAppContext } from "../context";
+import React from 'react';
 
 const Logout = () => {
   const navigate = useNavigate();

@@ -1,55 +1,57 @@
+import React from 'react';
+import { useDictionary } from "../hooks/useDictionary";
 import styles from './Travel.module.css'
-import aboutstyle from './About.module.css'
-// import sliderimg from '../img/about/projections-animate.svg'
+import aboutstyle from '../Pages/About.module.css'
+import timeline from '../Pages/timeline.module.css'
+import sliderimg from '../img/about/slider.png'
 import values from '../img/about/values.png'
 
 import missao from '../img/about/mission.png'
-import vision from '../img/about/visao.png'
-import CardAbout from '../CardAbout.jsx'
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
+import vision from '../img/about/vision.png'
+import CardAbout from '../CardAbout'
 
 
 
 
 const Home = () => {
+  const dictionary = useDictionary().about;
   return (
     <main>
 
 <section id="slider" className=" ">
-        <div className={`container pt-5  ${aboutstyle.marginslide}`}>
+        <div className={`container pt-2  ${aboutstyle.marginslide}`}>
           <div className={`row  d-flex justify-content-center ${styles.containerslider}`}>
             <div className={`col-lg-4 col-md-6 align-self-center mb-md-0 mb-4 ${styles.textslider}`}>
-              <h1 className={styles.h1}>Conheça a Interworld</h1>
-              <h4 className={`mb-4 mt-3`}>Conheça os destinos incríveis <br/> que a InterWorld oferece!</h4>
+              <h1 className={styles.h1}>{dictionary?.title}</h1>
+              <h4 className={`mb-4 mt-3`}>{dictionary?.description1} <br /> {dictionary?.description2}</h4>
             <div className={`${styles.divbuttons}`}>
               <a
-                href="#"
-                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 ${styles.buttons}`}
-              >Contato</a>
+                 path="/cadastrar"
+                className={`button btn btn-primary button-primary d-md-inline-block d-block mb-md-0 mb-2 mr-md-2 disabled  ${styles.buttons}`}
+              >{dictionary?.button}</a>
               </div>
             </div>
             <div className={`col-lg-8 col-md-4 text-center ${styles.divimg}`}>
-              {/* <img src={sliderimg} className={`img-fluid ${styles.img}`}/> */}
+              <img src={sliderimg} className={`img-fluid ${styles.img}`} style={{width:"75%"}}/>
             </div>
           </div>
           </div>
       </section>
       <section className=" pt-4">
-          <h2 className={` ${aboutstyle.storyh2}  mt-5  text-center text-uppercase font-weight-bold`}>Sobre nós</h2>
+          <h2 className={` ${aboutstyle.storyh2}  mt-5  text-center text-uppercase font-weight-bold`}>{dictionary?.aboutus}</h2>
           <div className={` ${aboutstyle.storyp2} p-2 mt-3`}>
-          <p className={`mt-2 d-flex ${aboutstyle.storytext} text-center`}>Fundamos a Interworld em 2015 com o objetivo de oferecer não apenas intercâmbios, e sim projetos de vida. O projeto da Interworld começou pequeno,
-              com apenas 5 integrantes e hoje contamos com mais de 100 profissionais para atender todas as necessidades de nossos alunos, com total dedição e comprometimento.
-              Nossa meta é transformar o intercâmbio em uma experiência única na vida do intercambista e uma grande oportunidade profissional.</p>
+          <p className={`mt-2 d-flex ${aboutstyle.storytext} text-center`}>{dictionary?.textaboutus}</p>
             </div>
       </section>
       <section>
-        <CardAbout img={vision}></CardAbout>
+        <CardAbout img1={missao} img2={vision} img3={values} ></CardAbout>
   
 
         
 
       </section>
-     
+
+      
     </main>
   
   
