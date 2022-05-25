@@ -8,10 +8,16 @@ export default function Footer() {
   const dictionary = useDictionary().footer;
 
   return (
+    
     <MDBFooter
       bgColor="light"
       className="text-center text-lg-start text-muted mt-5"
     >
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<a href="https://wa.me/message/UV2WL52EK66EI1" style={{position:'fixed',width:'60px',height:'60px',bottom:'40px', left: '40px',backgroundColor:'#25d366',color:'#FFF',borderRadius:'50px',textAlign:'center', fontSize:'30px',boxShadow: '1px 1px 2px #888',
+  zIndex:'1000',}} target="_blank">
+<i style={{marginTop:'16px'}} className="fa fa-whatsapp"></i>
+</a>
       <section className="d-flex justify-content-center justify-content-lg-between">
         <div className="me-5 d-none d-lg-block"></div>
       </section>
