@@ -5,21 +5,26 @@ const Complete = ({ items }) => {
   const [optionsList, setOptionsList] = useState([]);
   const [destiny, setDestiny] = useState({});
 
-  const renderTitle = (title) => <span>{title}</span>;
+  const renderTitle = (country, flag) => (
+    <span className="d-flex justify-content-start align-items-center gap-1">
+      <img src={flag} width="20px" />
+      {country}
+    </span>
+  );
 
-  const renderItem = (title, img) => ({
-    value: title,
+  const renderItem = (city) => ({
+    value: city,
     label: (
       <div
-        onClick={() => setDestiny({ title, img })}
+        onClick={() => setDestiny({ city })}
         style={{
           display: "flex",
           justifyContent: "flex-start",
+          flexDirection: "column",
           gap: 10,
         }}
       >
-        <img src={img} width="40px" />
-        {title}
+        {city}
       </div>
     ),
   });
@@ -27,8 +32,8 @@ const Complete = ({ items }) => {
   const onSearch = (value) => {
     if (items?.length > 0) {
       mountOptionsList(
-        items.filter((country) =>
-          country?.name?.common?.toLowerCase().includes(value.toLowerCase())
+        items.filter((item) =>
+          item?.country?.toLowerCase().includes(value.toLowerCase())
         )
       );
       if (value === "") mountOptionsList();
@@ -37,23 +42,19 @@ const Complete = ({ items }) => {
 
   const mountOptionsList = (filter) => {
     if (filter) {
-      return setOptionsList([
-        {
-          label: renderTitle("Destinos"),
-          options: filter.map((item) =>
-            renderItem(item?.name?.common, item?.flags?.svg)
-          ),
-        },
-      ]);
+      return setOptionsList(
+        filter.map((item) => ({
+          label: renderTitle(item?.country, item?.flag),
+          options: item?.cities?.map((item) => renderItem(item)),
+        }))
+      );
     }
-    setOptionsList([
-      {
-        label: renderTitle("Destinos"),
-        options: items.map((item) =>
-          renderItem(item?.name?.common, item?.flags?.svg)
-        ),
-      },
-    ]);
+    setOptionsList(
+      items.map((item) => ({
+        label: renderTitle(item?.country, item?.flag),
+        options: item?.cities?.map((item) => renderItem(item)),
+      }))
+    );
   };
 
   useEffect(() => {
@@ -73,7 +74,7 @@ const Complete = ({ items }) => {
     >
       <Input.Search
         size="large"
-        placeholder="Qual o seu destino?"
+        placeholder="Busque por um país de destino"
         className="w-100"
       />
     </AutoComplete>
