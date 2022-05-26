@@ -1,4 +1,11 @@
 const dictionary = () => ({
+  navigation: {
+    destinations: "Destinos",
+    budget: "Orçamento",
+    aboutUs: "Sobre",
+    login: "Entrar",
+    signUp: "Cadastrar",
+  },
   home: {
     slidertext1:"Faça o seu intercâmbio",
     slidertext2:" em 2022!",

@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 import { useState, Component, Fragment, useMemo, memo } from "react";
+import { useDictionary } from "../../hooks/useDictionary";
 
 // components: mdb
 import {
@@ -20,6 +21,7 @@ import { navigationItems } from "./config";
 import { useAppContext } from "../../context";
 import { atomCurrentUser } from "../../store/atoms";
 import { useRecoilValue } from "recoil";
+import NavigationLogo from "./NavigationLogo";
 
 // recursive render navigation function
 const getItemContentType = (item) => {
@@ -59,12 +61,13 @@ const Navigation = () => {
   const navigate = useNavigate();
   const user = useRecoilValue(atomCurrentUser);
   const [showBasic, setShowBasic] = useState(false);
+  const navigationDictionary = useDictionary().navigation;
 
   return (
     <MDBNavbar expand="lg" light bgColor="light" className="mb-4">
       <MDBContainer>
         <MDBNavbarBrand onClick={() => navigate("/")}>
-          InterWorld
+          <NavigationLogo />
         </MDBNavbarBrand>
 
         <MDBNavbarToggler
@@ -77,7 +80,9 @@ const Navigation = () => {
         </MDBNavbarToggler>
 
         <MDBCollapse navbar show={showBasic}>
-          {navigationItems(!!user?.displayName).menu.map(getAllItemsComponents)}
+          {navigationItems(!!user?.displayName, navigationDictionary).menu.map(
+            getAllItemsComponents
+          )}
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
