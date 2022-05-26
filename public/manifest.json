@@ -4,11 +4,11 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64 32x32 16x16 24x24",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo512.pg",
       "type": "image/png",
       "sizes": "192x192"
     },
