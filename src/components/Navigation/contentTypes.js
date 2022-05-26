@@ -6,6 +6,7 @@ import LanguageToggle from "../LanguageToggle";
 import NavigationButtonLink from "./NavigationButtonLink";
 import NavigationDropdownLink from "./NavigationDropdownLink";
 import NavigationLink from "./NavigationLink/index";
+import NavigationLogo from "./NavigationLogo";
 import NavigationUserDropdown from "./NavigationUserDropdown";
 
 export const CONTENT_TYPES = {
@@ -49,5 +50,9 @@ export const CONTENT_TYPES = {
       route: item.route,
       variant: item.variant,
     }),
+  },
+  navigationLogo: {
+    componentTag: NavigationLogo,
+    getAttributes: () => ({}),
   },
 };

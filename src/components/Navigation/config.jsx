@@ -2,7 +2,7 @@
 
 import NavigationDropdownLink from "./NavigationDropdownLink";
 
-export const navigationItems = (isAuthenticated) => ({
+export const navigationItems = (isAuthenticated, dictionary) => ({
   menu: [
     {
       contentType: "section",
@@ -11,17 +11,17 @@ export const navigationItems = (isAuthenticated) => ({
       items: [
         {
           contentType: "link",
-          name: "Destinos",
+          name: dictionary.destinations,
           route: "/destinos",
         },
         {
           contentType: "link",
-          name: "Orçamentos",
+          name: dictionary.budget,
           route: "/orcamentos",
         },
         {
           contentType: "link",
-          name: "Sobre",
+          name: dictionary.aboutUs,
           route: "/sobre",
         },
       ],
@@ -36,7 +36,7 @@ export const navigationItems = (isAuthenticated) => ({
           hidden: !isAuthenticated,
           dropdownItems: [
             {
-              label: <NavigationDropdownLink name="Sair" variant="logout" />,
+              label: <NavigationDropdownLink name={dictionary.logOut} variant="logout" />,
               key: "0",
             },
           ],
@@ -46,14 +46,14 @@ export const navigationItems = (isAuthenticated) => ({
           outline: true,
           contentType: "button",
           className: "text-dark",
-          name: "Cadastrar",
+          name: dictionary.signUp,
           route: "/cadastrar",
           hidden: isAuthenticated,
         },
         {
           contentType: "button",
           color: "secondary",
-          name: "Login",
+          name: dictionary.login,
           route: "/login",
           hidden: isAuthenticated,
         },

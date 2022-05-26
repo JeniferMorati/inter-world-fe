@@ -1,4 +1,5 @@
 import { DatePicker, Space } from "antd";
+import { useDictionary } from "../../hooks/useDictionary";
 
 const { RangePicker } = DatePicker;
 
@@ -11,15 +12,19 @@ function onOk(value) {
   console.log("onOk: ", value);
 }
 
-export default () => (
-  <Space direction="vertical" className="w-100">
-    <RangePicker
-      className="w-100"
-      format="MM-DD-YYYY"
-      onChange={onChange}
-      placeholder={['Data de inicio', 'Data de fim']}
-      locale="pt_BR"
-      onOk={onOk}
-    />
-  </Space>
-);
+export default () => {
+  const dictionary = useDictionary().budgets;
+
+  return (
+    <Space direction="vertical" className="w-100">
+      <RangePicker
+        className="w-100"
+        format="MM-DD-YYYY"
+        onChange={onChange}
+        placeholder={[dictionary.startDate, dictionary.endDate]}
+        locale="pt_BR"
+        onOk={onOk}
+      />
+    </Space>
+  );
+};

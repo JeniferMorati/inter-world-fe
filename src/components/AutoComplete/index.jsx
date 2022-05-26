@@ -1,7 +1,9 @@
 import { useEffect, useState, memo } from "react";
 import { Input, AutoComplete, Space } from "antd";
+import { useDictionary } from "../../hooks/useDictionary";
 
 const Complete = ({ items }) => {
+  const dictionary = useDictionary().budgets;
   const [optionsList, setOptionsList] = useState([]);
   const [destiny, setDestiny] = useState({});
 
@@ -74,7 +76,7 @@ const Complete = ({ items }) => {
     >
       <Input.Search
         size="large"
-        placeholder="Busque por um país de destino"
+        placeholder={dictionary?.destinySearch}
         className="w-100"
       />
     </AutoComplete>
