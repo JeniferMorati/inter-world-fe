@@ -1,12 +1,15 @@
-import React  from 'react';
+import React from "react";
 // components: mdb
 
-import { MDBBtn, MDBNavbarItem } from "mdb-react-ui-kit";
+import {
+  MDBBtn,
+  MDBDropdownItem,
+  MDBDropdownLink,
+  MDBNavbarItem,
+} from "mdb-react-ui-kit";
 
-// router
 import { useNavigate } from "react-router";
 import { useSetRecoilState } from "recoil";
-import { useAppContext } from "../../../context";
 import { atomCurrentUser } from "../../../store/atoms";
 
 // ::
@@ -15,7 +18,7 @@ const NavigationDropdownLink = ({ name, route, variant }) => {
   const setUser = useSetRecoilState(atomCurrentUser);
 
   return (
-    <Atom.NavBarItems>
+    <MDBNavbarItem>
       <MDBDropdownItem>
         <MDBDropdownLink
           onClick={() => {
@@ -27,7 +30,7 @@ const NavigationDropdownLink = ({ name, route, variant }) => {
           {name}
         </MDBDropdownLink>
       </MDBDropdownItem>
-    </Atom.NavBarItems>
+    </MDBNavbarItem>
   );
 };
 

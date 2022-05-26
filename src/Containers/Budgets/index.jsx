@@ -23,6 +23,10 @@ const BudgetsContainer = () => {
   // recoil: loadable
   const destinationLoadable = useRecoilValueLoadable(selectorGetDestinations);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <Atom.ContainerBudgets>
       <BackdropLoading open={destinationLoadable.state === "loading"} />
