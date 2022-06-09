@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if (user && user.display_name) navigateTo("/");
+    if (user && user.displayName) navigateTo("/");
   }, [user]);
 
   return (
