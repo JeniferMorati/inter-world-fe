@@ -19,7 +19,7 @@ const SignUp = () => {
   const user = useRecoilValue(atomCurrentUser);
 
   useEffect(() => {
-    if (Object.keys(user).length > 0) navigate("/");
+    if (user && user.displayName) navigate("/");
   }, [user]);
 
   return (
