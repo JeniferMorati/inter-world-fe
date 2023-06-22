@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { useRecoilValue } from "recoil";
-import { atomCurrentUser } from "../store/atoms";
 
 import "../cadastro.css";
+import { useAppContext } from "../context";
 
 const SignUp = () => {
-  const navigate = useNavigate();
+  const { isAuthenticated } = useAppContext();
+  const navigateTo = useNavigate();
 
   const [name, setName] = useState("");
 
@@ -15,12 +15,11 @@ const SignUp = () => {
   const [surname, setSurname] = useState("");
   const [password, setPassword] = useState("");
 
-  // recoil: states
-  const user = useRecoilValue(atomCurrentUser);
-
   useEffect(() => {
-    if (user && user.displayName) navigate("/");
-  }, [user]);
+    if (isAuthenticated) {
+      navigateTo("/");
+    }
+  }, [isAuthenticated]);
 
   return (
     <div className="container">

@@ -18,10 +18,8 @@ import { useNavigate } from "react-router";
 // navigation: configs
 import { CONTENT_TYPES } from "./contentTypes";
 import { navigationItems } from "./config";
-import { useAppContext } from "../../context";
-import { atomCurrentUser } from "../../store/atoms";
-import { useRecoilValue } from "recoil";
 import NavigationLogo from "./NavigationLogo";
+import FirebaseAuth from "../../firebase";
 
 // recursive render navigation function
 const getItemContentType = (item) => {
@@ -56,10 +54,11 @@ const getAllItemsComponents = (item) => {
   );
 };
 
+const firebase = new FirebaseAuth();
+
 // ::
 const Navigation = () => {
   const navigate = useNavigate();
-  const user = useRecoilValue(atomCurrentUser);
   const [showBasic, setShowBasic] = useState(false);
   const navigationDictionary = useDictionary().navigation;
 
@@ -80,9 +79,10 @@ const Navigation = () => {
         </MDBNavbarToggler>
 
         <MDBCollapse navbar show={showBasic}>
-          {navigationItems(!!user?.displayName, navigationDictionary).menu.map(
-            getAllItemsComponents
-          )}
+          {navigationItems(
+            firebase?.appAuth?.currentUser?.email,
+            navigationDictionary
+          ).menu.map(getAllItemsComponents)}
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>

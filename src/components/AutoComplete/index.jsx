@@ -1,11 +1,10 @@
 import { useEffect, useState, memo } from "react";
-import { Input, AutoComplete, Space } from "antd";
+import { Input, AutoComplete } from "antd";
 import { useDictionary } from "../../hooks/useDictionary";
 
-const Complete = ({ items }) => {
+const Complete = ({ items, handleClickOption }) => {
   const dictionary = useDictionary().budgets;
   const [optionsList, setOptionsList] = useState([]);
-  const [destiny, setDestiny] = useState({});
 
   const renderTitle = (country, flag) => (
     <span className="d-flex justify-content-start align-items-center gap-1">
@@ -14,11 +13,11 @@ const Complete = ({ items }) => {
     </span>
   );
 
-  const renderItem = (city) => ({
+  const renderItem = ({ city, flag, country }) => ({
     value: city,
     label: (
       <div
-        onClick={() => setDestiny({ city })}
+        onClick={() => handleClickOption({ city, flag, country })}
         style={{
           display: "flex",
           justifyContent: "flex-start",
@@ -52,9 +51,15 @@ const Complete = ({ items }) => {
       );
     }
     setOptionsList(
-      items.map((item) => ({
-        label: renderTitle(item?.country, item?.flag),
-        options: item?.cities?.map((item) => renderItem(item)),
+      items.map((destination) => ({
+        label: renderTitle(destination?.country, destination?.flag),
+        options: destination?.cities?.map((item) =>
+          renderItem({
+            city: item,
+            country: destination.country,
+            flag: destination.flag,
+          })
+        ),
       }))
     );
   };

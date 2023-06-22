@@ -1,13 +1,11 @@
 import { selector } from "recoil";
 import { requester } from "../services/requester";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
-import { atomCurrentUser } from "./atoms";
-import { firebase } from "../firebase";
+import FirebaseAuth from "../firebase";
 
-const fireStore = getFirestore(firebase);
-
-const CollectionRef = collection(fireStore, "destinations");
+const firebase = new FirebaseAuth();
+const CollectionRef = collection(firebase.appStore, "destinations");
 
 export const selectorGetRatingUsers = selector({
   key: "GetRatingUsers",

@@ -1,27 +1,15 @@
 // components: mdb
-import { Avatar, Dropdown, Menu, Space } from "antd";
+import { Avatar, Dropdown, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import {
-  MDBDropdown,
-  MDBDropdownItem,
-  MDBDropdownMenu,
-  MDBDropdownToggle,
-  MDBIcon,
-  MDBNavbarItem,
-} from "mdb-react-ui-kit";
-import { useRecoilValue } from "recoil";
-
-// styled-components
-import styled from "styled-components";
+import { MDBNavbarItem } from "mdb-react-ui-kit";
 
 // context
-import { useAppContext } from "../../../context";
-import { atomCurrentUser } from "../../../store/atoms";
+import FirebaseAuth from "../../../firebase";
+
+const firebase = new FirebaseAuth();
 
 //::
 const NavigationUserDropdown = ({ dropdownItems }) => {
-  const user = useRecoilValue(atomCurrentUser);
-
   const menu = <Menu items={dropdownItems} />;
 
   return (
@@ -31,8 +19,10 @@ const NavigationUserDropdown = ({ dropdownItems }) => {
           onClick={(event) => event.preventDefault()}
           className="d-flex justify-content-center align-items-center"
         >
-          <Avatar size="large" src={user?.photoURL} />
-          <span className="m-2 text-dark">{user?.displayName}</span>
+          <Avatar size="large" src={firebase?.appAuth?.currentUser?.photoURL} />
+          <span className="m-2 text-dark">
+            {firebase?.appAuth?.currentUser?.displayName}
+          </span>
           <DownOutlined className="text-secondary" />
         </a>
       </Dropdown>

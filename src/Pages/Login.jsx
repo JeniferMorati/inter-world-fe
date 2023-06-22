@@ -1,20 +1,14 @@
-import React from 'react';
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { useRecoilValue } from "recoil";
 import { useAppContext } from "../context";
-import { atomCurrentUser } from "../store/atoms";
 import { Button } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
 import "../login.css";
 
 const Login = () => {
   const navigateTo = useNavigate();
-  const { signInGoogle } = useAppContext();
-
-  // recoil: states
-  const user = useRecoilValue(atomCurrentUser);
+  const { signInGoogle, isAuthenticated } = useAppContext();
 
   // local: states
   const [email, setEmail] = useState("");
@@ -24,9 +18,11 @@ const Login = () => {
     await signInGoogle();
   };
 
-  useEffect(() => {
-    if (user && user.displayName) navigateTo("/");
-  }, [user]);
+	useEffect(() => {
+		if (isAuthenticated) {
+			navigateTo("/")
+		}
+	}, [isAuthenticated])
 
   return (
     <div className="container">
