@@ -5,6 +5,9 @@ import { useAppContext } from "../context";
 import { Button } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
 import "../login.css";
+import FirebaseAuth from "../firebase";
+
+const firebase = new FirebaseAuth();
 
 const Login = () => {
   const navigateTo = useNavigate();
@@ -18,11 +21,11 @@ const Login = () => {
     await signInGoogle();
   };
 
-	useEffect(() => {
-		if (isAuthenticated) {
-			navigateTo("/")
-		}
-	}, [isAuthenticated])
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigateTo("/");
+    }
+  }, [isAuthenticated]);
 
   return (
     <div className="container">
@@ -52,7 +55,19 @@ const Login = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+              <button
+                onClick={(event) => {
+                  event.preventDefault();
+                  firebase.handleLogin({
+                    auth: firebase.appAuth,
+                    email,
+                    password,
+                  });
+                }}
+                className="login-form-btn"
+              >
+                Login
+              </button>
             </div>
 
             <div className="container-login-form-btn">

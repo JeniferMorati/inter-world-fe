@@ -3,6 +3,9 @@ import { useNavigate } from "react-router";
 
 import "../cadastro.css";
 import { useAppContext } from "../context";
+import FirebaseAuth from "../firebase";
+
+const firebase = new FirebaseAuth();
 
 const SignUp = () => {
   const { isAuthenticated } = useAppContext();
@@ -76,7 +79,18 @@ const SignUp = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Cadastrar</button>
+              <button
+                onClick={() =>
+                  firebase.handleCreateAccount({
+                    auth: firebase.appAuth,
+                    email,
+                    password,
+                  })
+                }
+                className="login-form-btn"
+              >
+                Cadastrar
+              </button>
             </div>
           </form>
         </div>

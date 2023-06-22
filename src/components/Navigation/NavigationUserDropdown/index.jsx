@@ -21,7 +21,8 @@ const NavigationUserDropdown = ({ dropdownItems }) => {
         >
           <Avatar size="large" src={firebase?.appAuth?.currentUser?.photoURL} />
           <span className="m-2 text-dark">
-            {firebase?.appAuth?.currentUser?.displayName}
+            {firebase?.appAuth?.currentUser?.displayName ||
+              firebase?.appAuth?.currentUser?.email}
           </span>
           <DownOutlined className="text-secondary" />
         </a>
