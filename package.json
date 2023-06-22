@@ -1,6 +1,7 @@
 {
   "name": "inter-world-fe",
   "version": "1.0.0",
+  "homepage": "http://JeniferMorati.github.io/inter-world-fe",
   "description": "front-end page for inter world project",
   "private": true,
   "contributors": [
@@ -17,7 +18,7 @@
     "react": "17.0.1",
     "react-country-flag": "^3.0.2",
     "react-dom": "17.0.1",
-    "react-loader-spinner": "^6.0.0-0",
+    "react-loader-spinner": "^5.3.4",
     "react-rating-stars-component": "^2.2.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
@@ -36,7 +37,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "template",
@@ -57,6 +60,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
-    "@babel/preset-env": "^7.18.0"
+    "@babel/preset-env": "^7.18.0",
+    "gh-pages": "^5.0.0"
   }
 }

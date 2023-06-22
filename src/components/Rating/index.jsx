@@ -1,6 +1,6 @@
 import { MDBBtn } from "mdb-react-ui-kit";
 import { useEffect, useState, memo } from "react";
-import { Plane } from "react-loader-spinner";
+import { Dna } from "react-loader-spinner";
 import ReactStars from "react-rating-stars-component";
 import { useRecoilRefresher_UNSTABLE, useRecoilValueLoadable } from "recoil";
 import { selectorGetRatingUsers } from "../../store/selectors";
@@ -81,11 +81,7 @@ const Reating = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center">
-      <Plane
-        secondaryColor="rgba(var(--mdb-secondary-rgb)"
-        color="rgba(var(--mdb-secondary-rgb)"
-        ariaLabel="loading-indicator"
-      />
+      <Plane height="80" width="80" ariaLabel="loading-indicator" />
     </div>
   );
 };
