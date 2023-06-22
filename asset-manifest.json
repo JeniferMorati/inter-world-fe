@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/inter-world-fe/static/css/main.20f94654.css",
+    "main.js": "/inter-world-fe/static/js/main.fe29453f.js",
+    "static/js/787.d0e1097a.chunk.js": "/inter-world-fe/static/js/787.d0e1097a.chunk.js",
+    "static/media/slider.png": "/inter-world-fe/static/media/slider.ec00e247aef553fec886.png",
+    "static/media/slidertravel.png": "/inter-world-fe/static/media/slidertravel.7462e304627d099a713b.png",
+    "static/media/img-vancouver.png": "/inter-world-fe/static/media/img-vancouver.b50d2832fefd004a6e10.png",
+    "static/media/img1.png": "/inter-world-fe/static/media/img1.3a4f7aac8d7f6ca8e2b4.png",
+    "static/media/img19.png": "/inter-world-fe/static/media/img19.f95d7b5b543b0543e0b1.png",
+    "static/media/img7-victoria.png": "/inter-world-fe/static/media/img7-victoria.586955873f4907047f8e.png",
+    "static/media/img4.png": "/inter-world-fe/static/media/img4.783396bd1eb580486566.png",
+    "static/media/img20.png": "/inter-world-fe/static/media/img20.c71528aeeda406accf58.png",
+    "static/media/img3.png": "/inter-world-fe/static/media/img3.68fa06457cb302293a14.png",
+    "static/media/img11-birmingham.png": "/inter-world-fe/static/media/img11-birmingham.608331bef7416dec279b.png",
+    "static/media/img16.png": "/inter-world-fe/static/media/img16.ed421d6405afbf75a4d3.png",
+    "static/media/img10-liverpool.png": "/inter-world-fe/static/media/img10-liverpool.15411327f5d0af2bfec9.png",
+    "static/media/img6-montreal.png": "/inter-world-fe/static/media/img6-montreal.7ee57a7d11135cb43e49.png",
+    "static/media/img15.png": "/inter-world-fe/static/media/img15.2b5b7c6210423c7a6b52.png",
+    "static/media/img12.png": "/inter-world-fe/static/media/img12.bf18d9ec54342cc23a99.png",
+    "static/media/img14.png": "/inter-world-fe/static/media/img14.728bb408b2c26cf10170.png",
+    "static/media/img2.png": "/inter-world-fe/static/media/img2.c1e269a66573cd445f78.png",
+    "static/media/img13.png": "/inter-world-fe/static/media/img13.c5fb50fc20f9278e0645.png",
+    "static/media/img18.png": "/inter-world-fe/static/media/img18.cf8ed1811f8e357abaa2.png",
+    "static/media/img17.png": "/inter-world-fe/static/media/img17.711977af6ffd6bc90ae8.png",
+    "static/media/img5-toronto.png": "/inter-world-fe/static/media/img5-toronto.0f58f02930aeebc19bff.png",
+    "static/media/img9-londres.png": "/inter-world-fe/static/media/img9-londres.64f6f26a89072a86ef94.png",
+    "static/media/iwlogo.png": "/inter-world-fe/static/media/iwlogo.d63f0db39d82f52bc036.png",
+    "static/media/vision.png": "/inter-world-fe/static/media/vision.4dce9d7239ab93a136ed.png",
+    "index.html": "/inter-world-fe/index.html",
+    "main.20f94654.css.map": "/inter-world-fe/static/css/main.20f94654.css.map",
+    "main.fe29453f.js.map": "/inter-world-fe/static/js/main.fe29453f.js.map",
+    "787.d0e1097a.chunk.js.map": "/inter-world-fe/static/js/787.d0e1097a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20f94654.css",
+    "static/js/main.fe29453f.js"
+  ]
+}
