@@ -81,7 +81,7 @@ const Reating = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center">
-      <Plane height="80" width="80" ariaLabel="loading-indicator" />
+      <Dna height="80" width="80" ariaLabel="loading-indicator" />
     </div>
   );
 };
